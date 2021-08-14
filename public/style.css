@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.first_cur{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+	font-family: Nanum Pen Script, cursive;
+	font-size: 25px;
+}
+
+.second_cur{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+	font-family: Nanum Pen Script, cursive;
+	font-size: 25px;
+}
+
+.third_cur{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+	font-family: Nanum Pen Script, cursive;
+	font-size: 25px;
+}
+
+.first_cur button{
+	position: absolute;
+	left: 50%;
+	top: 90%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+	font-family: Nanum Pen Script, cursive;
+	background: none;
+	border:2px solid darkseagreen;
+	padding: 15px 20px;
+	border-radius: 20px;
+	margin-top: 30px;
+	outline: none;
+	cursor: pointer;
+	transition: all .4s;
+}
+
+.first_cur button:hover{
+	background-color: darkslategray;
+}
+.second_cur button{
+	position: absolute;
+	left: 50%;
+	top: 90%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+	font-family: Nanum Pen Script, cursive;
+	background: none;
+	border:2px solid darkseagreen;
+	padding: 15px 20px;
+	border-radius: 20px;
+	margin-top: 30px;
+	outline: none;
+	cursor: pointer;
+	transition: all .4s;
+}
+
+.second_cur button:hover{
+	background-color: darkslategray;
+}
+
+.third_cur .hero button{
+	position: absolute;
+	left: 50%;
+	top: 90%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+	font-family: Nanum Pen Script, cursive;
+	background: none;
+	border:2px solid darkseagreen;
+	padding: 15px 20px;
+	border-radius: 20px;
+	margin-top: 30px;
+	outline: none;
+	cursor: pointer;
+	transition: all .4s;
+}
+
+.third_cur .hero button:hover{
+	background-color: darkslategray;
+}
