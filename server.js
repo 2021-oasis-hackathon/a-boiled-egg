@@ -12,6 +12,9 @@ app.set('view engine', 'ejs');
 app.use('/public', express.static('public'));
 
 //-------------------------------------------------------------------------
+app.get("/mainpage",(request,response) => {
+  response.render('mainpage.ejs')
+});
 
 app.get("/page1",(request,response) => {
     response.render('page1.ejs')
