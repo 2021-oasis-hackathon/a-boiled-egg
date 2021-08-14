@@ -5,9 +5,9 @@ app.use(express.urlencoded({extended: true}));
 const MongoClient = require('mongodb').MongoClient;
 
 var db;
-MongoClient.connect('mongodb+srv://hackathon1234:qwer1234@cluster0.9xmuh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', function(에러, client){
-  if (에러) return console.log(에러);
-  db = client.db('todoapp');
+MongoClient.connect('mongodb+srv://hackathon1234:qwer1234@cluster0.9xmuh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', function(error, client){
+  if (error) return console.log(error);
+  db = client.db('database');
   app.listen(3000, function(request, response){
     console.log('서버실행!');
   });
@@ -40,7 +40,11 @@ app.get("/page3",(request,response) => {
 app.post('/add', function(request,response){
   response.send('전송완료');
   console.log(request.body);
-  db.collection('hackathon').insertOne({내용전체 : 요청.body}, (에러,) =>{
-    console.log('저장완료!');
-  });
-});  
+  console.log(request.body.contents[1])
+  for ( let i=0 ; i<3 ; i++ ){
+    db.collection('collection').insertOne( { 내용: request.body.contents[i]} , function(에러,결과){
+      console.log('저장완료!');
+    });
+  }
+  
+});
