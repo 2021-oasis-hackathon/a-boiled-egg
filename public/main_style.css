@@ -6,6 +6,13 @@
 	box-sizing: border-box;
 }
 
+.bg{
+	background-color:rgba(0, 0, 0, 0.5);
+	width:100%;
+	height:100vh;
+	position: absolute;
+}
+
 .first_cur{
 	position: absolute;
 	left: 50%;
