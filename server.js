@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+
+
 const bodyParser = require('body-parser');
 app.use(express.urlencoded({extended: true}));
 const MongoClient = require('mongodb').MongoClient;
@@ -8,7 +10,7 @@ var db;
 MongoClient.connect('mongodb+srv://hackathon1234:qwer1234@cluster0.9xmuh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', function(error, client){
   if (error) return console.log(error);
   db = client.db('database');
-  app.listen(3000, function(request, response){
+  app.listen(8080, function(request, response){
     console.log('서버실행!');
   });
 })
@@ -52,7 +54,7 @@ app.get("/page3",(request,response) => {
   app.get("/QnA_5",(request,response) => {
     response.render('QnA_5.ejs')
   });
-//-------------------------------------------------------------------------
+//-------------------------------------------------------------------------저장하기
 app.post('/add', function(request,response){
   response.send('전송완료');
   console.log(request.body);
@@ -67,8 +69,9 @@ app.post('/add', function(request,response){
 
 //-------------------------------------------------------------------------몽고db 모든 데이터 가져오기
 app.get('/list', function(요청, 응답){
-  db.collection('collection').find().toArray(function(에러, 결과){
-    console.log(결과)
-    응답.render('QnAlist.ejs', { collections : 결과 })
-  })
+  for ( let i=0 ; i<3 ; i++ ){
+    db.collection('collection').find({_id : 2}).toArray(function(에러, 결과){
+      console.log(결과)
+    })
+  }
 })
