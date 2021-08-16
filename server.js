@@ -10,7 +10,7 @@ var db;
 MongoClient.connect('mongodb+srv://hackathon1234:qwer1234@cluster0.9xmuh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', function(error, client){
   if (error) return console.log(error);
   db = client.db('database');
-  app.listen(8080, function(request, response){
+  app.listen(3000, function(request, response){
     console.log('서버실행!');
   });
 })
@@ -23,6 +23,9 @@ app.use('/public', express.static('public'));
 app.use(express.urlencoded({extended: true}))
 
 //-------------------------------------------------------------------------
+app.get("/face",(request,response) => {
+  response.render('index.ejs')
+});
 app.get("/mainpage",(request,response) => {
   response.render('mainpage.ejs')
 });
