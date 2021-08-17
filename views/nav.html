@@ -1,12 +1,30 @@
-<div class="container">
-		<div class="header">
-			<h1><a href="/mainpage">LOGO</a></h1>
-			<div class="nav">
-				<ul>
-					<li><a href="/page1">서비스 소개</a></li>
-					<li><a href="/page2">그대와 마주하다</a></li>
-					<li><a href="/page3">그땐 그랬지</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+<nav class="navbar navbar-light bg-white fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="visibility: visible;height: 720px; border-radius: 0px 0px 0px 50px;">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/page1">&nbsp;&nbsp;&nbsp;<img class="img-concert" src="../public/images/login.png"/>&nbsp;&nbsp;&nbsp;로그인</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="page2.ejs"><br>&nbsp;&nbsp;&nbsp;<img class="img-concert" src="../public/images/guess.png"/>&nbsp;&nbsp;나는 거북이일까?</a>
+            </li>
+        <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="page3.ejs"><br>&nbsp;&nbsp;&nbsp;<img class="img-concert" src="../public/images/guide.png"/>&nbsp;&nbsp;&nbsp;스트레칭 가이드북</a>
+            </li>
+        <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"><a class="nav-link active" aria-current="page" href="#" style="margin-top: 350px;">&nbsp;&nbsp;&nbsp;<img class="img-concert" src="../public/images/help.png">&nbsp;&nbsp;&nbsp;&nbsp;도움말</a>
+        </li>
+          </div>
+      </div>
+      </div>
+    </nav>
