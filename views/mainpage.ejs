@@ -174,27 +174,38 @@
         // Prediction 2: run input through teachable machine classification model
         const prediction = await model.predict(posenetOutput);
 
-        if(prediction[0].probability.toFixed(2) >= 0.80){
-         if(status == "good"){
+        if(prediction[0].probability.toFixed(2) == 1.00){
+          status = "good";}
+
+
+        else if(prediction[1].probability.toFixed(2) >= 0.80){
+          if (status == "bad") {
             count++
-            
-         }
-         if(count%3 == 0 && status == "good"){
-            count = 0
-            var moveback = new Audio('../public/audio/moveback.mp3');
-               moveback.play();
-            
-         }
-         status = "bad"
-      }else if(prediction[1].probability.toFixed(2) == 1.00){
-         status = "good"
-      }
+          }
+
+          if ( count>100 && status == "bad"){
+              count = 0;
+              status = "good";
+              var moveback = new Audio('../public/audio/moveback.mp3');
+              moveback.play();
+            }           
+          if(status=="good"){
+            count==0;
+          }    
+          status = "bad";
+        }
+          
+
+
         for (let i = 0; i < maxPredictions; i++) {
-            const classPrediction =
-                prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+            const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
-        // finally draw the poses
+
+
+
+
+
         drawPose(pose);
     }
     function drawPose(pose) {
@@ -209,12 +220,6 @@
         }
     }
   </script>
-
-
-  
-
-
-    
   
     <script>
       var check = $("input[type='checkbox']");
