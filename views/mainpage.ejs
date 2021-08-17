@@ -157,6 +157,7 @@
           count =0;
           var unactivate = new Audio('../public/audio/unactivate.mp3');
               unactivate.play();
+              webcam.stop();
           return false;
         }
         webcam.update(); // update the webcam frame
