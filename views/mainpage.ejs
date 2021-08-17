@@ -15,7 +15,9 @@
       /* The switch - the box around the slider */
       .switch {
         margin-left: 40px;
-        position: relative;
+        position: absolute;
+        margin-top: 75vh;
+        margin-left: 48.3%;
         display: inline-block;
         width: 60px;
         height: 34px;
@@ -94,6 +96,13 @@
       <img class="profile" src="../public/images/main.gif">
     </div>
 
+    <div>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
     
 
     
@@ -141,7 +150,7 @@
 
         // append/get elements to the DOM
         const canvas = document.getElementById("canvas");
-        canvas.width = size; canvas.height = size;
+        canvas.width = 0; canvas.height = 0;
         ctx = canvas.getContext("2d");
         labelContainer = document.getElementById("label-container");
         for (let i = 0; i < maxPredictions; i++) { // and class labels
@@ -193,19 +202,10 @@
   </script>
 
 
-  <button onclic="location.href='#'"> 제발 </button>
+  
 
 
-
-
-
-
-    <div>
-      <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-      </label>
-    </div>
+    
   
     <script>
       var check = $("input[type='checkbox']");
