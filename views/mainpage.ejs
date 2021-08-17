@@ -9,13 +9,97 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/public/style.css">
 
+<!------------------------------------------------스위치 토글버튼-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    <style>
+      /* The switch - the box around the slider */
+      .switch {
+        margin-left: 40px;
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        vertical-align:middle;
+      }
+
+      /* Hide default HTML checkbox */
+      .switch input {display:none;}
+
+      /* The slider */
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #2196F3;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+
+      input:checked + .slider {
+        background-color: #ccc;
+      }
+
+      input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+      }
+
+      input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 34px;
+      }
+
+      .slider.round:before {
+        border-radius: 50%;
+      }
+
+      p {
+        margin:0px;
+        display:inline-block;
+        font-size:15px;
+        font-weight:bold;
+      }
+    </style>
+
+
+
+
   </head>
 
   <body>
 
+    <%- include('nav.html') %>
+
+    <div class="box" style="background: #BDBDBD;">
+      <img class="profile" src="../public/images/main.gif">
+    </div>
+
+    
+
+    
+    <!--카메라모델!-->
     <!---------------------------------------------------------------------------------------------------------->
     <div>Teachable Machine Pose Model</div>
-    <button type="button" onclick="init()">Start</button>
     <div><canvas id="canvas"></canvas></div>
     <div id="label-container"></div>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
@@ -29,6 +113,7 @@
     let model, webcam, ctx, labelContainer, maxPredictions;
 
     async function init() {
+
         const modelURL = URL + "model.json";
         const metadataURL = URL + "metadata.json";
 
@@ -56,6 +141,7 @@
         }
     }
 
+    var i=1
     async function loop(timestamp) {
         webcam.update(); // update the webcam frame
         await predict();
@@ -94,17 +180,26 @@
 
 
   <button onclic="location.href='#'"> 제발 </button>
+  <button type="button" onclick="init()">Start</button>
 
 
-  <%- include('nav.html') %>
 
 
 
-  <div class="box" style="background: #BDBDBD;">
-    <img class="profile" src="../public/images/main.gif">
-  </div>
 
-
+    <div>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  
+    <script>
+      var check = $("input[type='checkbox']");
+      check.click(function(){
+        $("p").toggle();
+      });
+    </script>
 
   </body>
 </html>
