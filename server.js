@@ -16,11 +16,21 @@ MongoClient.connect('mongodb+srv://hackathon1234:qwer1234@cluster0.9xmuh.mongodb
 })
 
 
-//-------------------------------------------------------------------------
+//미들웨어-------------------------------------------------------------------------
 
 app.set('view engine', 'ejs');
 app.use('/public', express.static('public'));
 app.use(express.urlencoded({extended: true}))
+
+
+//----------------------------------------------------------------------------로그인기능세팅
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+const session = require('express-session');
+
+app.use(session({secret : '비밀코드', resave : true, saveUninitialized: false}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 //-------------------------------------------------------------------------
 app.get("/face",(request,response) => {
@@ -34,22 +44,6 @@ app.get("/page1",(request,response) => {
   response.render('page1.ejs')
 });
 
-app.get("/page2",mypagefunction,(request,response) => {
-    console.log(request.user);
-    response.render('page2.ejs', {})
-  })
-
-app.get("/page3",mypagefunction,(request,response) => {
-    response.render('page3.ejs',{})
-  });
-
-function mypagefunction(request,response,next) {
-  if (request.user) {
-    next()
-  } else {
-    response.send('로그인안하셨는데요?')
-  }
-}
 
 
 
@@ -79,20 +73,18 @@ app.get('/list', function(요청, 응답){
 })
 
 
-//----------------------------------------------------------------------------로그인기능세팅
-const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
-const session = require('express-session');
 
-app.use(session({secret : '비밀코드', resave : true, saveUninitialized: false}));
-app.use(passport.initialize());
-app.use(passport.session());
 //-----------------------------------------------------------------------------로그인포스트요청실행
 app.post('/add', passport.authenticate('local', {
   failureRedirect : '/fail'
 }), function(req, res){
   res.redirect('/mainpage')
 });
+
+
+
+
+
 
 passport.use(new LocalStrategy({
   usernameField: 'id',
@@ -117,9 +109,28 @@ passport.serializeUser(function (user, done) {
   done(null, user.id)
 });
 
-passport.deserializeUser(function (mongoid, done) {
-  db.collection('login').findOne({ id: mongoid}, function (error, result) {
-    console.log(result)
-    done(null, result)
+passport.deserializeUser(function (아이디, done) {
+  db.collection('login').findOne({ id: 아이디 }, function (에러, 결과) {
+    done(null, 결과)
   })
 }); 
+
+//-------------------------------------------
+
+app.get("/page2", dologin,(request,response) => {
+  response.render('page2.ejs',{})
+});
+
+app.get("/page3",dologin,(request,response) => {
+  response.render('page3.ejs',{})
+});
+
+
+function dologin(request, response, next){
+  console.log(request.user)
+  if (request.user){
+    next();
+  } else {
+    response.send('로그인안하셨는데요?');
+  };
+};
