@@ -1,54 +1,86 @@
-<!doctype html>
-<html lang="ko">
-  <head>
-    <title>나는거북이일까?</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/public/style.css">
-    
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>통계</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="./public/statisticstyle.css">
+
+</head>
+
+
+
+
+<body>
     <!-- var temp = location.href.split("?");
     data = temp[1].split(":");
     key = data[0]; -->
 
 
-    <script language = "javascript">
-    window.onload = function() {
-    
-    var chart = new CanvasJS.Chart("chartContainer", {
-      theme: "light2", // "light1", "light2", "dark1", "dark2"
-      exportEnabled: true,
-      animationEnabled: true,
-      title: {
-        text: "오늘의 나는?"
-      },
-      data: [{
-        type: "pie",
-        startAngle: 25,
-        toolTipContent: "<b>{label}</b>: {y}%",
-        showInLegend: "true",
-        legendText: "{label}",
-        indexLabelFontSize: 16,
-        indexLabel: "{label} - {y}%",
-        dataPoints: [
-          { y: 80, label: "거북이!" },
-          { y: 20, label: "정자세!" },
-        ]
-      }]
-    });
-    chart.render();
+	<div class="statistic_turtle">
+		<img src="../public/images/stastic.gif">
+	</div>
+	<div>
+		<h class="ps">오늘 나는 얼마나 오랫동안<br>거북이로 지냈을까요?</p>
+	</div>
+	<div>
+		<h class="dialog">다들 거북잉으로 저처럼<br>거북이가 되지않도록<br>조심하세요!!</h>
+	</div>
+  <div class="box" style="background: #BDBDBD;">
+    <img class="profile" src="../public/images/main.gif">
+  </div>
+<!-- stick.chart -->
 
-    }
-    </script>
-    </head>
+    <div class="wrap">
+        <h1>이번주의 나는?</h1>
+      <div class="holder">
+        <div class="bar cf" data-percent="20%">
+          <span class="label">
+            Mon </span>
+      </div>
+      <div class="bar cf" data-percent="30%">
+        <span class="label light">
+          Tue</span>
+      </div>
+      <div class="bar cf" data-percent="27%">
+        <span class="label">
+          Wed</span>
+      </div>
+      <div class="bar cf" data-percent="40%">
+        <span class="label light">
+          Thu</span>
+      </div>
+      <div class="bar cf" data-percent="50%">
+        <span class="label">
+          Fri</span>
+      </div>
+      <div class="bar cf" data-percent="43%">
+        <span class="label light">
+          Sat</span>
+      </div>
+        <div class="bar cf" data-percent="17%">
+        <span class="label">
+          Sun</span>
+      </div>
+      </div>
+    </div>
 
-    <body>
-      <%- include('nav.html') %>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
 
-      <h1>key</h1>
+<!-- pie.chart -->
 
-      <div id="chartContainer" style="height: 370px; width: 40%; margin-top: 50vh; margin-left: 0;"></div>
-      <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    </body>
-  </html>
+<div class="pie-chart">
+	<h1 style="margin-left: 20px">
+		오늘의 나는?
+	</h1>
+	<div class="hide_box"></div>
+	<div class="container chart" data-size="200" data-value="40" data-arrow="up">
+	</div>
+</div>
+
+<script  src="../public/statisticscript.js"></script>
+
+
+</body>
+</html>
