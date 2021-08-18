@@ -171,6 +171,22 @@ li a:hover {
     left: 750px;
     top: 70px;
  }
+
+ .ttt_right_up{
+    position: fixed;
+    display: inline;
+    width: 250px;
+    left: 920px;
+    top: 460px;
+ }
+
+  .ttturtle{
+    position: fixed;
+    display: inline;
+    width: 250px;
+    left: 900px;
+    top: 600px;
+ }
  
  .script_2{
     position: fixed;
@@ -178,6 +194,14 @@ li a:hover {
     width: 220px;
     left: 330px;
     top: 590px;
+ }
+
+ .script_3{
+    position: fixed;
+    display: inline;
+    width: 220px;
+    left: 1150px;
+    top: 450px;
  }
  
  .left_down{
@@ -189,6 +213,8 @@ li a:hover {
  }
  .check_box{
      position: absolute;
-     top: 700px;
-     left: 700px;;
+     top: 580px;
+     left: 900px;;
+     font-size: 1.2em;
+     font-family: 'Do Hyeon', sans-serif;
  }

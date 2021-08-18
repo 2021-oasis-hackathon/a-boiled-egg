@@ -135,6 +135,6 @@ function dologin(request, response, next){
   if (request.user){
     next();
   } else {
-    response.render('logincome.ejs')
+    response.render('page1.ejs')
   };
 };
