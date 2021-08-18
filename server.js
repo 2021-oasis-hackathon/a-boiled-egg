@@ -38,25 +38,9 @@ app.get("/page2",(request,response) => {
 app.get("/page3",(request,response) => {
     response.render('page3.ejs')
   });
-  app.get("/QnA_1",(request,response) => {
-    response.render('QnA_1.ejs')
-  });
 
-  app.get("/QnA_2",(request,response) => {
-    response.render('QnA_2.ejs')
-  });
 
-  app.get("/QnA_3",(request,response) => {
-    response.render('QnA_3.ejs')
-  });
-
-  app.get("/QnA_4",(request,response) => {
-    response.render('QnA_4.ejs')
-  });
-
-  app.get("/QnA_5",(request,response) => {
-    response.render('QnA_5.ejs')
-  });
+  
 //-------------------------------------------------------------------------저장하기
 app.post('/add', function(request,response){
   response.send('전송완료');
