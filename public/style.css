@@ -69,3 +69,8 @@ li a:hover {
     left: 435px;
     top: 680px;
  }
+ .check_box{
+     position: absolute;
+     top: 700px;
+     left: 700px;;
+ }

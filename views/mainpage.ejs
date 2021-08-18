@@ -85,6 +85,35 @@
         <span class="slider round"></span>
       </label>
     </div>
+<!------------------------------------------------------------------민감도버튼-->
+    <div class="check_box">
+      <div class="form-check form-check-inline">
+        <input id="sensitivity" onclick="sensityfunc"class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">민감</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">2둔함</label>
+      </div>
+    </div>
+    
+    <script>
+      function sensityfunc() {
+      a=0;
+    };
+      const sense=document.querySelector("#sensitivity");
+      sense.addEventListener('click',sensityfunc);
+    </script>
+
+    <script>
+      function sensityfunc() {
+      a=0;
+    };
+      const sense=document.querySelector("#sensitivity");
+      sense.addEventListener('click',sensityfunc);
+    </script>
+    
+
  
     
     <!--카메라모델!-->
@@ -148,14 +177,16 @@
       var count = 0
 
       async function predict() {
+    
+
           const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
           const prediction = await model.predict(posenetOutput);
 
-          if(prediction[1].probability.toFixed(2) == 1.00){
+          if(prediction[2].probability.toFixed(2) == 1.00){
             status = "good";
           }
 
-          else if(prediction[0].probability.toFixed(2) >= 0.80){
+          else if(prediction[1].probability.toFixed(2) >= 0.80){
             if (status == "bad") {
               count++
             }
