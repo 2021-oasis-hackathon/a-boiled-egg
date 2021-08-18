@@ -38,7 +38,6 @@ app.get("/face",(request,response) => {
 });
 app.get("/mainpage",(request,response) => {
   response.render('mainpage.ejs')
-  console.log(request.query)
 });
 
 app.get("/page1",(request,response) => {
@@ -122,7 +121,8 @@ passport.deserializeUser(function (아이디, done) {
 //-------------------------------------------
 
 app.get("/page2", dologin,(request,response) => {
-  response.render('page2.ejs')
+  console.log(request.query.time)
+  response.render('page2.ejs',)
 });
 
 app.get("/page3",dologin,(request,response) => {
@@ -130,15 +130,11 @@ app.get("/page3",dologin,(request,response) => {
 });
 
 
-
-
-
-
 function dologin(request, response, next){
   console.log(request.user)
   if (request.user){
     next();
   } else {
-    response.send('로그인해야 볼수있지롱')
+    response.render('logincome.ejs')
   };
 };

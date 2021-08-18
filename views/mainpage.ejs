@@ -104,6 +104,7 @@
     </div>
 
     
+    
 
     
     <!--카메라모델!-->
@@ -115,6 +116,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
     <script type="text/javascript">
     var k = 0;
+    var time = 0;
     async function onoff(){
       k++;
       if(k%2 !=0){
@@ -188,6 +190,9 @@
               status = "good";
               var moveback = new Audio('../public/audio/moveback.mp3');
               time ++;
+              //여기서뽑고싶옹
+
+
 
               moveback.play();
             }           
@@ -195,9 +200,8 @@
             count==0;
           }    
           status = "bad";
-          var time = 0
         }
-          
+
 
 
         for (let i = 0; i < maxPredictions; i++) {
@@ -222,6 +226,8 @@
             }
         }
     }
+
+    
   </script>
   
     <script>
@@ -231,5 +237,22 @@
       });
     </script>
 
+
+
+    <button id ="ididid" onclick="aaa">아아아아</button>
   </body>
+
+  <script>
+    function aaa() {
+      location.href=`/page2?time=${time}`;
+    };
+
+
+    const aaaaaa=document.querySelector("#ididid");
+    aaaaaa.addEventListener('click',aaa);
+  </script>
+
+
 </html>
+
+
