@@ -122,7 +122,7 @@ ul li:before {
 /* pie */
 
 .wrapper {
-  position: absolute;
+  position: fixed;
   width: 400px;
   height: 400px;
   margin: auto;
@@ -141,13 +141,13 @@ ul li:before {
 
 .pie-chart{
   width: 550px;
-  position: absolute;
+  position: fixed;
   left: 280px;
   bottom: 100px;
 }
 
 .hide_box{
-  position: relative;
+  position: fixed;
   left: 200px;
   color: #ffff;
 }
@@ -156,13 +156,13 @@ ul li:before {
 
 .statistic_turtle{
   width: 480px;
-  position: absolute;
+  position: fixed;
   left: 920px;
   top: 600px;
 }
 
 .ps{
-  position: absolute;
+  position: fixed;
   font-size: 1.5em;
   /* font-weight: bold; */
   font-family: 'Do Hyeon', sans-serif;
@@ -171,7 +171,7 @@ ul li:before {
 }
 
 .dialog{
-  position: absolute;
+  position: fixed;
   right: 420px;
   bottom: 300px;
   font-size: 2em;
@@ -179,11 +179,11 @@ ul li:before {
 }
 
 .box {
-	position: absolute;
+	position: fixed;
   top: 250px;
 	display: flex;
-	left: 550px;
-  transform: translate(-50%,-50%);
+	left: 250px;
+
 	box-shadow: 5px 5px 5px lightgray;
   width: 330px;
   height: 330px; 

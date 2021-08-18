@@ -1,4 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Montserrat:400,700);
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+.title{
+    position: fixed;
+    top: 50px;
+    left: 96px;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+.video_1{
+    position: fixed;
+    width: 440px;
+    top: 161px;
+    left: 96px;
+    border-radius: 10px;
+}
+
+.video_2{
+    position: fixed;
+    width: 440px;
+    top: 161px;
+    left: 550px;
+    border-radius: 10px;
+}
+
+.video_3{
+    position: fixed;
+    width: 440px;
+    top: 161px;
+    right: 96px;
+    border-radius: 10px;
+}
+
+.box_3 {
+	position: fixed;
+    left: 50px;
+    top: 440px;
+	display: flex;
+	box-shadow: 5px 5px 5px lightgray;
+    width: 361px;
+    height: 361px; 
+    border-radius: 70%;
+    overflow: hidden;
+}
+.profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.ex1{
+    position: fixed;
+    top: 550px;
+    left: 420px;
+    width: 350px;
+    background-color: rgba(0, 0, 0, 0.76);
+    color: white;
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: 'Do Hyeon', sans-serif;
+    border-radius: 90px;
+}
+.ex1-1{
+    position: fixed;
+    font-family: 'Do Hyeon', sans-serif;
+    top: 620px;
+    left: 460px;
+    width: 350px;
+}
+
+.ex2{
+    position: fixed;
+    top: 550px;
+    left: 780px;
+    width: 350px;
+    background-color: rgba(0, 0, 0, 0.76);
+    color: white;
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: 'Do Hyeon', sans-serif;
+    border-radius: 90px;
+}
+.ex2-1{
+    position: fixed;
+    font-family: 'Do Hyeon', sans-serif;
+    top: 620px;
+    left: 820px;
+    width: 350px;
+}
+
+.ex3{
+    position: fixed;
+    top: 550px;
+    left: 1140px;
+    width: 350px;
+    background-color: rgba(0, 0, 0, 0.76);
+    color: white;
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: 'Do Hyeon', sans-serif;
+    border-radius: 90px;
+}
+.ex3-1{
+    position: fixed;
+    font-family: 'Do Hyeon', sans-serif;
+    top: 620px;
+    left: 1180px;
+    width: 350px;
+}
+
+
 
 .box {
 	position: absolute;
@@ -46,32 +160,32 @@ li a:hover {
     position: fixed;
     display: inline;
     width: 800px;
-    left: 900px;
-    top: 75px;
+    left: 1000px;
+    top: 40px;
  }
  
  .right_up{
     position: fixed;
     display: inline;
     width: 250px;
-    left: 650px;
-    top: 95px;
+    left: 750px;
+    top: 70px;
  }
  
  .script_2{
     position: fixed;
     display: inline;
     width: 220px;
-    left: 215px;
-    top: 680px;
+    left: 330px;
+    top: 590px;
  }
  
  .left_down{
     position: fixed;
     display: inline;
     width: 220px;
-    left: 435px;
-    top: 680px;
+    left: 580px;
+    top: 580px;
  }
  .check_box{
      position: absolute;

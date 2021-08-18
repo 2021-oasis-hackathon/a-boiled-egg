@@ -80,15 +80,25 @@
 <!-- pie.chart -->
 
 <div class="pie-chart">
-	<h1 style="margin-left: 20px">
+  <h1 style="margin-left: 20px">
 		오늘의 나는?
 	</h1>
+  <!-- <input type='button' value='오늘의 나는?' onclick='setInnerHTML()'/> -->
+
 	<div class="hide_box"></div>
-	<div class="container chart" data-size="200" data-value="40" data-arrow="up">
+	<div  id='pl' class="container chart" data-size="200" data-value = '30' data-arrow="up">
 	</div>
+  <!-- $('#pl').attr('data-value', '40'); -->
 </div>
 
 <script  src="../public/statisticscript.js"></script>
+<!-- <script>
+  function setInnerHTML() {
+  const element = document.getElementById('my_div');
+  element.innerHTML 
+    = '<div id='pl' class="container chart" data-size="200" data-value = '30' data-arrow="up"><div>';
+} 
+</script> -->
 
 
 </body>
