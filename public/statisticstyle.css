@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 
+
 html {
   line-height: 1;
 }
@@ -66,6 +67,7 @@ h1 {
   letter-spacing: 3px;
   text-transform: uppercase;
 }
+
 
 ul li {
   line-height: 2;

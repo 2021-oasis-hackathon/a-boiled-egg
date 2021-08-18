@@ -73,7 +73,42 @@
 
 
   <body>
-    <%- include('nav.html') %>
+    <nav class="navbar navbar-light bg-white fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="visibility: visible;height: 720px; border-radius: 0px 0px 0px 50px;">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          
+          <div class="offcanvas-body">
+    
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/mainpage" style="margin-bottom: 20px;">&nbsp;&nbsp;<img class="img-concert" src="../public/images/home.png"/>&nbsp;&nbsp;홈</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/page1">&nbsp;&nbsp;&nbsp;<img class="img-concert" src="../public/images/login.png"/>&nbsp;&nbsp;&nbsp;로그인</a>
+              </li>
+              <li class="nav-item">
+                <a id ="ididid" onclick="aaa" class="nav-link active" aria-current="page" style="cursor:pointer" >&nbsp;&nbsp;&nbsp;<img class="img-concert" src="../public/images/guess.png"/>&nbsp;&nbsp;나는 거북이일까?</a>
+              </li>
+          <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/page3">&nbsp;&nbsp;&nbsp;<img class="img-concert" src="../public/images/guide.png"/>&nbsp;&nbsp;&nbsp;스트레칭 가이드북</a>
+              </li>
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/help" style="margin-top: 270px; width:145px;">&nbsp;&nbsp;<img class="img-concert" src="../public/images/help.png">&nbsp;&nbsp;&nbsp;거북잉?</a>
+          </li>
+            </div>
+        </div>
+        </div>
+      </nav>
+
+
 
     <div class="box" style="background: #BDBDBD;">
       <img class="profile" src="../public/images/main.gif">
@@ -188,6 +223,7 @@
                   status = "good";
                   var moveback = new Audio('../public/audio/moveback.mp3');
                   time ++;
+                  console.log(time)
                   //여기서뽑고싶옹
 
                   moveback.play();
@@ -217,6 +253,7 @@
                   status = "good";
                   var moveback = new Audio('../public/audio/moveback.mp3');
                   time ++;
+                  console.log(time)
                   //여기서뽑고싶옹
 
                   moveback.play();
@@ -258,7 +295,6 @@
         $("p").toggle(onoff());
       });
     </script>
-    <button id ="ididid" onclick="aaa">아아아아</button>
 
   </body>
 
@@ -266,7 +302,7 @@
 
   <script>
     function aaa() {
-      location.href=`/page2?time=${time}`;
+      location.href=`/page2?time=${time},${time}`;
     };
     const aaaaaa=document.querySelector("#ididid");
     aaaaaa.addEventListener('click',aaa);
