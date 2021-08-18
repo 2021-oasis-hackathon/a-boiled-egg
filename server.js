@@ -34,12 +34,25 @@ app.get("/page1",(request,response) => {
   response.render('page1.ejs')
 });
 
-app.get("/page2",(request,response) => {
-    response.render('page2.ejs')
-  }); 
-app.get("/page3",(request,response) => {
-    response.render('page3.ejs')
+app.get("/page2",mypagefunction,(request,response) => {
+    console.log(request.user);
+    response.render('page2.ejs', {})
+  })
+
+app.get("/page3",mypagefunction,(request,response) => {
+    response.render('page3.ejs',{})
   });
+
+function mypagefunction(request,response,next) {
+  if (request.user) {
+    next()
+  } else {
+    response.send('로그인안하셨는데요?')
+  }
+}
+
+
+
 
 
 
@@ -104,6 +117,9 @@ passport.serializeUser(function (user, done) {
   done(null, user.id)
 });
 
-passport.deserializeUser(function (아이디, done) {
-  done(null, {})
+passport.deserializeUser(function (mongoid, done) {
+  db.collection('login').findOne({ id: mongoid}, function (error, result) {
+    console.log(result)
+    done(null, result)
+  })
 }); 
