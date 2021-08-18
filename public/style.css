@@ -54,7 +54,7 @@
 
 .ex1{
     position: fixed;
-    top: 550px;
+    top: 480px;
     left: 420px;
     width: 350px;
     background-color: rgba(0, 0, 0, 0.76);
@@ -67,14 +67,14 @@
 .ex1-1{
     position: fixed;
     font-family: 'Do Hyeon', sans-serif;
-    top: 620px;
+    top: 550px;
     left: 460px;
     width: 350px;
 }
 
 .ex2{
     position: fixed;
-    top: 550px;
+    top: 480px;
     left: 780px;
     width: 350px;
     background-color: rgba(0, 0, 0, 0.76);
@@ -87,14 +87,14 @@
 .ex2-1{
     position: fixed;
     font-family: 'Do Hyeon', sans-serif;
-    top: 620px;
+    top: 550px;
     left: 820px;
     width: 350px;
 }
 
 .ex3{
     position: fixed;
-    top: 550px;
+    top: 480px;
     left: 1140px;
     width: 350px;
     background-color: rgba(0, 0, 0, 0.76);
@@ -107,7 +107,7 @@
 .ex3-1{
     position: fixed;
     font-family: 'Do Hyeon', sans-serif;
-    top: 620px;
+    top: 550px;
     left: 1180px;
     width: 350px;
 }

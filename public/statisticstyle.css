@@ -52,8 +52,9 @@ body {
 }
 
 .wrap {
-  width: 750px;
-  margin-left: 850px ;
+  width: 700px;
+  margin-top: 20px;
+  margin-left: 650px ;
 }
 
 h1 {
@@ -140,16 +141,10 @@ ul li:before {
 }
 
 .pie-chart{
-  width: 550px;
+  width: 430px;
   position: fixed;
-  left: 280px;
-  bottom: 100px;
-}
-
-.hide_box{
-  position: fixed;
-  left: 200px;
-  color: #ffff;
+  left: 130px;
+  top: 250px;
 }
 
 /* moving turtle */
@@ -157,8 +152,8 @@ ul li:before {
 .statistic_turtle{
   width: 480px;
   position: fixed;
-  left: 920px;
-  top: 600px;
+  left: 700px;
+  top: 500px;
 }
 
 .ps{
@@ -166,32 +161,14 @@ ul li:before {
   font-size: 1.5em;
   /* font-weight: bold; */
   font-family: 'Do Hyeon', sans-serif;
-  bottom: 160px;
-  left: 570px;
+  bottom: 250px;
+  left: 360px;
 }
 
 .dialog{
   position: fixed;
-  right: 420px;
-  bottom: 300px;
+  right: 200px;
+  bottom: 150px;
   font-size: 2em;
   font-family: 'Gamja Flower', cursive;
-}
-
-.box {
-	position: fixed;
-  top: 250px;
-	display: flex;
-	left: 250px;
-
-	box-shadow: 5px 5px 5px lightgray;
-  width: 330px;
-  height: 330px; 
-  border-radius: 70%;
-  overflow: hidden;
-}
-.profile {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
