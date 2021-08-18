@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../public/style.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    <style>
+      /* The switch - the box around the slider */
+      .switch {
+        position: fixed;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        vertical-align:middle;
+		left: calc(50% - 30px);
+		top: calc(75% - 17px);
+      }
+
+      /* Hide default HTML checkbox */
+      .switch input {display:none;}
+
+      /* The slider */
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 34px;
+      }
+
+      .slider.round:before {
+        border-radius: 50%;
+      }
+
+      p {
+        margin:0px;
+        display:inline-block;
+        font-size:15px;
+        font-weight:bold;
+      }
+    </style>
+	
+	
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+		  <img class="profile" src="../public/images/main.gif">
+		</div>
+
+		<div>
+		  <label class="switch">
+			<input type="checkbox">
+			<span class="slider round"></span>
+		  </label>
+		</div>
+
+		<script>
+		  var check = $("input[type='checkbox']");
+		  check.click(function(){
+			$("p").toggle(onoff());
+		  });
+		</script>
+		<div class="left_down">
+			<img src="../public/images/arrow_left_down.png">
+		</div>
+
+		<div class="right_up">
+			<img style="display: inline-block;" src="../public/images/arrow_right_up.png">
+		</div>
+
+		<div class="script_1">
+      
+
+			<h1>거북ing이 뭔가요?</h1>
+			<p>
+				화면에서 사용자 얼굴까지의<br>거리를 실시간으로 분석하여,<br>거리가 너무 가까울 경우<br>음성으로 경고 메시지를 출력해
+				<br>사용자가 거북목 증후근을<br>미리 예방할 수 있도록<br>개발한 서비스입니다.
+			</p>
+		</div>
+
+		<div class="script_2">
+			<h2>이건 뭔가요?</h2>
+			<p>경고 메세지 출력 기능을 켜고<br>끌 수 있는 스위치입니다.</p>
+		</div>
+	</div>
+</body>
+</html>

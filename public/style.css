@@ -36,3 +36,36 @@ li a:hover {
     border-radius: 5px;
     transition: color .3s ease-in-out,background-color .3s ease-in-out,border-color .3s ease-in-out;
 }
+
+
+.script_1{
+    position: fixed;
+    display: inline;
+    width: 800px;
+    left: 900px;
+    top: 75px;
+ }
+ 
+ .right_up{
+    position: fixed;
+    display: inline;
+    width: 250px;
+    left: 650px;
+    top: 95px;
+ }
+ 
+ .script_2{
+    position: fixed;
+    display: inline;
+    width: 220px;
+    left: 215px;
+    top: 680px;
+ }
+ 
+ .left_down{
+    position: fixed;
+    display: inline;
+    width: 220px;
+    left: 435px;
+    top: 680px;
+ }
