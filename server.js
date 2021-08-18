@@ -29,9 +29,7 @@ app.get("/face",(request,response) => {
 app.get("/mainpage",(request,response) => {
   response.render('mainpage.ejs')
 });
-app.get("/page1",(request,response) => {
-    response.render('page1.ejs')
-  });
+
 app.get("/page2",(request,response) => {
     response.render('page2.ejs')
   });
@@ -40,7 +38,7 @@ app.get("/page3",(request,response) => {
   });
 
 
-  
+
 //-------------------------------------------------------------------------저장하기
 app.post('/add', function(request,response){
   response.send('전송완료');
@@ -62,3 +60,17 @@ app.get('/list', function(요청, 응답){
     })
   }
 })
+
+
+//----------------------------------------------------------------------------로그인기능
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+const session = require('express-session');
+
+app.use(session({secret : '비밀코드', resave : true, saveUninitialized: false}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.get("/page1",(request,response) => {
+  response.render('page1.ejs')
+});
