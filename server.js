@@ -38,6 +38,7 @@ app.get("/face",(request,response) => {
 });
 app.get("/mainpage",(request,response) => {
   response.render('mainpage.ejs')
+  console.log(request.query)
 });
 
 app.get("/page1",(request,response) => {

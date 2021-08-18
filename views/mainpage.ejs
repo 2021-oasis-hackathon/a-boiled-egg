@@ -187,12 +187,15 @@
               count = 0;
               status = "good";
               var moveback = new Audio('../public/audio/moveback.mp3');
+              time ++;
+
               moveback.play();
             }           
           if(status=="good"){
             count==0;
           }    
           status = "bad";
+          var time = 0
         }
           
 
