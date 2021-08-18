@@ -86,23 +86,22 @@
       </label>
     </div>
 <!------------------------------------------------------------------민감도버튼-->
-
-    <div class="check_box">
-      <div class="form-check">
-        <input id="sensitivity" onlick="sensityfunc" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-        <label class="form-check-label" for="exampleRadios1">
-          둔함
-        </label>
-      </div>
-      <div class="form-check">
-        <input id="sensitivity2" onclick="sensityfunc2" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
-          민감
-        </label>
-      </div>
-    </div> 
-
-
+    <div>
+      <div class="check_box">
+        <div class="form-check">
+          <input id="sensitivity" onlick="sensityfunc" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+          <label class="form-check-label" for="exampleRadios1">
+            둔함
+          </label>
+        </div>
+        <div class="form-check">
+          <input id="sensitivity2" onclick="sensityfunc2" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+          <label class="form-check-label" for="exampleRadios2">
+            민감
+          </label>
+        </div>
+      </div> 
+    </div>
  
     
     <!--카메라모델!-->
@@ -230,9 +229,7 @@
             }
           }
           
-//-------------------------------------------------------------------------------------
-
-
+//---------------------------------------------------------------------
           for (let i = 0; i < maxPredictions; i++) {
               const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
               labelContainer.childNodes[i].innerHTML = classPrediction;
@@ -274,6 +271,8 @@
   </script>
 
 
+<!-------------------민감도버튼 이벤트스트립트-------------------------->
+
   <script>
     function sensityfunc() {
     a=0;
@@ -291,6 +290,8 @@
     const sense2=document.querySelector("#sensitivity2");
     sense2.addEventListener('click',sensityfunc2);
   </script>
+
+<!--------------------------------------------------------------------->
 
 </html>
 
