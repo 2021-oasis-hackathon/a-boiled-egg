@@ -7,13 +7,39 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/public/style.css">
+    <script>
+    window.onload = function() {
 
-  </head>
-  <body>
+    var chart = new CanvasJS.Chart("chartContainer", {
+      theme: "light2", // "light1", "light2", "dark1", "dark2"
+      exportEnabled: true,
+      animationEnabled: true,
+      title: {
+        text: "오늘의 나는?"
+      },
+      data: [{
+        type: "pie",
+        startAngle: 25,
+        toolTipContent: "<b>{label}</b>: {y}%",
+        showInLegend: "true",
+        legendText: "{label}",
+        indexLabelFontSize: 16,
+        indexLabel: "{label} - {y}%",
+        dataPoints: [
+          { y: 20, label: "거북이!" },
+          { y: 80, label: "정자세!" },
+        ]
+      }]
+    });
+    chart.render();
 
-    <%- include('nav.html') %>
+    }
+    </script>
+    </head>
 
-    <h1>나는거북이일까? 페이지입니당</h1>
-
-  </body>
-</html>
+    <body>
+      <%- include('nav.html') %>
+      <div id="chartContainer" style="height: 370px; width: 40%; margin-top: 50vh; margin-left: 0;"></div>
+      <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    </body>
+  </html>
