@@ -122,8 +122,10 @@ passport.deserializeUser(function (아이디, done) {
 
 app.get("/page2", dologin,(request,response) => {
   console.log(request.query.time)
-  response.render('page2.ejs',)
+  const time = request.query.time;
+  response.render('page2.ejs', {time : time});
 });
+
 
 app.get("/page3",dologin,(request,response) => {
   response.render('page3.ejs')
