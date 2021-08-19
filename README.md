@@ -10,3 +10,9 @@
 
 ![삶은계란_거북ing_추가판넬2](https://user-images.githubusercontent.com/87998104/130007573-46afe53d-64ab-4164-91b8-cfcb97df52cb.jpg)
 
+### 개발에 사용한 기술
+
+* HTML,CSS,EJS,javascript(프론트엔드)-Bootstrap,Jquery활용
+* Node.js, Express, MongoDB(백엔드)
+* Google teachablmachine이용 모델학습
+* tensorflow.js 라이브러리사용 
