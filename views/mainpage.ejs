@@ -301,6 +301,10 @@
 <!---------------------------위험도 시간 체크------------------------------------>
 
   <script>
+    var now = new Date();	// 현재 날짜 및 시간
+    var hours = now.getHours();
+
+
     function aaa() {
       location.href=`/page2?time=${time}`;
     };
