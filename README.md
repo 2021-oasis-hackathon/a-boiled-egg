@@ -26,5 +26,4 @@
 * Node.js, Express, MongoDB(백엔드)
 * Google teachablmachine이용 모델학습
 * tensorflow.js 라이브러리사용
-* tensorflow.js 라이브러리사용 
 
