@@ -21,9 +21,6 @@
 
 
 ### 💻 개발에 사용한 기술
-=======
-### 개발에 사용한 기술
-
 
 * HTML,CSS,EJS,javascript(프론트엔드)-Bootstrap,Jquery활용
 * Node.js, Express, MongoDB(백엔드)
